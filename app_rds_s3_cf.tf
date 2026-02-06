@@ -93,9 +93,9 @@ module "rds" {
   identifier = "tracknow-db"
 
   engine               = "postgres"
-  engine_version       = "16.2"
+  engine_version       = "15.5"
   family               = "postgres16"
-  major_engine_version = "16"
+  major_engine_version = "15"
   instance_class       = "db.t3.medium"
 
   storage_type          = "gp3"
