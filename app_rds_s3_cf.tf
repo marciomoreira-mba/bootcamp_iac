@@ -1,5 +1,5 @@
 #####################
-# SG da App (EC2 Moodle) e do RDS
+# SG da App (EC2 ) e do RDS
 #####################
 
 module "app_sg" {
@@ -45,7 +45,7 @@ module "rds_sg" {
 }
 
 #####################
-# EC2 Moodle
+# EC2 
 #####################
 
 data "aws_ami" "amazon_linux" {
@@ -92,9 +92,9 @@ module "rds" {
 
   identifier = "tracknow-db"
 
-  engine               = "aurora-postgresql"
-  engine_version       = "17.4"
-  family               = "aurora-postgresql17"
+  engine               = "postgres"
+  engine_version       = "17.6"
+  family               = "postgres17"
   major_engine_version = "17"
   instance_class       = "db.t3.medium"
 
@@ -107,10 +107,14 @@ module "rds" {
   password = var.db_master_password
   port     = 5432
 
-  multi_az               = false
-  publicly_accessible    = false
-  vpc_security_group_ids = [module.rds_sg.security_group_id]
+  multi_az            = false
+  publicly_accessible = false
+
+  # chave: subnet group explícito nas mesmas subnets da VPC do módulo
+  create_db_subnet_group = true
   subnet_ids             = module.vpc.private_subnets
+
+  vpc_security_group_ids = [module.rds_sg.security_group_id]
 
   storage_encrypted = true
   kms_key_id        = aws_kms_key.rds.arn
