@@ -1,5 +1,25 @@
+# Terraform
 .terraform/
 .terraform.lock.hcl
 terraform.tfstate
-terraform.tfstate.backup
+terraform.tfstate.*
+.terraform.tfstate.lock.info
 crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc
+
+# Variáveis sensíveis
+*.tfvars
+*.tfvars.json
+!example.tfvars
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
