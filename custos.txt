@@ -1,0 +1,23 @@
+Custo estimado do Squad de Consultoria (2 semanas)
+A consultoria será responsável por conduzir a migração dos dados e da aplicação para a AWS, garantindo continuidade operacional e mitigação de riscos. Também irá implementar um pipeline de CI/CD para automatizar o processo de deploy, aumentando a agilidade, a confiabilidade e a padronização das entregas. Adicionalmente, será provisionada uma arquitetura cloud resiliente, segura e escalável, preparada para suportar o crescimento do negócio e atender às melhores práticas da AWS.
+Perfil
+Valor diário médio (R$)
+Dias
+Subtotal (R$)
+Analista DevOps Pleno
+1.200,00
+10
+12.000,00
+Analista SRE Pleno
+1.300,00
+10
+13.000,00
+Analista Segurança (Sec) Pleno
+1.400,00
+10
+14.000,00
+Total do Squad (2 semanas)
+—
+—
+39.000,00
+
